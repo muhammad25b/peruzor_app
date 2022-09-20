@@ -203,7 +203,7 @@ CORS_ALLOWED_ORIGINS = [
 # CORS_ALLOW_ALL_ORIGINS = True
 import dj_database_url
 prod_db = dj_database_url.config(conn_max_age = 500)
-DATABASES['DEFAULT'].update(prod_db)
+DATABASES['default'].update(prod_db)
 
 from django.test.utils import ignore_warnings
 ignore_warnings(message="No directory at", module="whitenoise.base").enable()
